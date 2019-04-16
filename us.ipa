@@ -1,4 +1,3 @@
-
 // UCL IPA keyboard overlay
 // based on the Unicode IPA keyboard designed by Mark Huckvale
 // http://www.phon.ucl.ac.uk/resource/phonetics/
@@ -8,8 +7,8 @@
 partial alphanumeric_keys
 xkb_symbols "uclphon" {
 
-    include "us(altgr-intl)"
-    name[Group1]= "English (US/intl, with AltGr dead keys for IPA overlay)";
+   include "us(altgr-intl)"
+   name[Group1]= "English (US/intl, with AltGr dead keys for IPA overlay)";
     
 //                 regular     <shift>      <alt>     <shift+alt> 
     key <TLDE> { [asciitilde,  0x100031a,   0x10001c0, 0x10002de ] };
@@ -22,7 +21,7 @@ xkb_symbols "uclphon" {
     key <AE07> { [ 	   7,  0x1000276,   0x10002e0, 0x1000264 ] };
     key <AE08> { [	   8,   asterisk,   0x100025e, 0x1000275 ] };
     key <AE09> { [	   9,  parenleft,   0x1000260, 0x1000153 ] };
-    key <AE10> { [	   0, parenriɡht,   0x100030a, 0x1000325 ] };
+    key <AE10> { [	   0, parenright,   0x100030a, 0x1000325 ] };
     key <AE11> { [     minus,  0x100203f,   0x1000361, 0x100002d ] };
     key <AE12> { [     equal,  0x100002b,   0x10001c2, 0x1000329 ] };
 
@@ -66,64 +65,4 @@ xkb_symbols "uclphon" {
     include "level3(ralt_switch)"
 };
 
-// original IPA overlay
-//partial alphanumeric_keys
-//xkb_symbols "uclphon" {
-//
-//    include "us(altgr-intl)"
-//    name[Group1]= "English (US/intl, with AltGr dead keys for IPA overlay)";
-//    
-//    key <TLDE> { [ 0x10002de, 0x100031a, 0x10001c0 ] };
-//    key <AE01> { [ 0x1000268, 0x10001c3, 0x1000274 ] };
-//    key <AE02> { [ 0x10000f8, 0x10002c8, 0x10001c1 ] };
-//    key <AE03> { [ 0x100025c, 0x1000279, 0x100027b ] };
-//    key <AE04> { [ 0x100027e, 0x1000024, 0x100027d ] };
-//    key <AE05> { [ 0x100026b, 0x10002cc, 0x100029f ] };
-//    key <AE06> { [ 0x1000250, 0x100032f, 0x1000253 ] };
-//    key <AE07> { [ 0x1000264, 0x1000276, 0x10002e0 ] };
-//    key <AE08> { [ 0x1000275, 0x100002a, 0x100025e ] };
-//    key <AE09> { [ 0x1000153, 0x1000028, 0x1000260 ] };
-//    key <AE10> { [ 0x1000325, 0x1000029, 0x100030a ] };
-//    key <AE11> { [ 0x100002d, 0x100203f, 0x1000361 ] };
-//    key <AE12> { [ 0x1000329, 0x100002b, 0x10001c2 ] };
-//
-//    key <AD02> { [ 0x1000077, 0x100028d, 0x10002b7 ] };
-//    key <AD03> { [ 0x1000065, 0x100025b, 0x1000258 ] };
-//    key <AD04> { [ 0x1000072, 0x1000281, 0x1000280 ] };
-//    key <AD05> { [ 0x1000074, 0x10003b8, 0x1000288 ] };
-//    key <AD06> { [ 0x1000079, 0x100028f, 0x100031e ] };
-//    key <AD07> { [ 0x1000075, 0x100028a, 0x1000266 ] };
-//    key <AD08> { [ 0x1000069, 0x100026a, 0x100031f ] };
-//    key <AD09> { [ 0x100006f, 0x1000254, 0x1000298 ] };
-//    key <AD10> { [ 0x1000070, 0x100028b, 0x1000278 ] };
-//    key <AD11> { [ 0x100005b, 0x10000e6, 0x1000257 ] };
-//    key <AD12> { [ 0x100005d, 0x1000289, 0x100032a ] };
-//
-//    key <AC01> { [ 0x1000061, 0x1000251, 0x1000320 ] };
-//    key <AC02> { [ 0x1000073, 0x1000283, 0x1000282 ] };
-//    key <AC03> { [ 0x1000064, 0x10000f0, 0x1000256 ] };
-//    key <AC04> { [ 0x1000066, 0x1000271, 0x100025f ] };
-//    key <AC05> { [ 0x1000261, 0x1000263, 0x1000262 ] };
-//    key <AC06> { [ 0x1000068, 0x1000265, 0x10002b0 ] };
-//    key <AC07> { [ 0x100006a, 0x1000272, 0x100029d ] };
-//    key <AC08> { [ 0x100006b, 0x100026c, 0x100026e ] };
-//    key <AC09> { [ 0x100006c, 0x100028e, 0x100026d ] };
-//    key <AC10> { [ 0x100003b, 0x10002d0, 0x1000308 ] };
-//    key <AC11> { [ 0x10002b2, 0x1000259, 0x100025a ] };
-//
-//    key <BKSL> { [ 0x10002b1, 0x1000303, 0x1000330 ] };
-//
-//    key <AB01> { [ 0x100007a, 0x1000292, 0x1000290 ] };
-//    key <AB02> { [ 0x1000078, 0x10003c7, 0x1000127 ] };
-//    key <AB03> { [ 0x1000063, 0x10000e7, 0x1000255 ] };
-//    key <AB04> { [ 0x1000076, 0x100028c, 0x1000291 ] };
-//    key <AB05> { [ 0x1000062, 0x10003b2, 0x1000299 ] };
-//    key <AB06> { [ 0x100006e, 0x100014b, 0x1000273 ] };
-//    key <AB07> { [ 0x100006d, 0x100026f, 0x1000270 ] };
-//    key <AB08> { [ 0x100002c, 0x1000306, 0x10002bc ] };
-//    key <AB09> { [ 0x100002e, 0x1002192, 0x1000324 ] };
-//    key <AB10> { [ 0x100002f, 0x1000294, 0x1000295 ] };
-//    
-//    include "level3(ralt_switch)"
-//};
 
